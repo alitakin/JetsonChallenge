@@ -1,5 +1,6 @@
 import cv2
 import RecognitionThread as RT
+import copy
 
 
 class Live_smile_detector:
@@ -13,7 +14,7 @@ class Live_smile_detector:
         self.prediction_label = 'Not smile'
 
     def getFrame(self):
-        return self.cropped_frame
+        return copy.deepcopy(self.cropped_frame)
 
     def setSmile(self, prediction):
         self.prediction_label = 'Smile' if prediction.item(1) >= prediction.item(0) else 'Not smile'
@@ -40,7 +41,7 @@ while True:
         # detected_face = crop_img[y:y + h, x:x + w]
 
     # Display the resulting cropped_frame and printing prediction
-    cv2.putText(crop_img, LSD.prediction_label, (0, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, 255, thickness=2)
+    cv2.putText(crop_img, LSD.prediction_label, (0, 50), cv2.FONT_HERSHEY_SIMPLEX, 0.5, 255, thickness=2)
     cv2.imshow('cropped_frame', crop_img)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
