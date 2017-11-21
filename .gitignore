@@ -1,7 +1,4 @@
-[
-
-
-Smile Detector/*.pyc
- Smile Detector/*.pyc
-Smile Detector/*.pyc
+Smile Detector/.idea/
 Smile Detector/*.mp4
+Smile Detector/test.py
+Smile Detector/__pycache__/
