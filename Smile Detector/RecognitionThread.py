@@ -12,7 +12,7 @@ class RT(threading.Thread):
         threading.Thread.__init__(self)
         self.graph = tf.get_default_graph()
         self.daemon = True
-        #  Loading model
+        # Loading model
         self.model_name = 'mobilenet_0.75_224_0_model.h5'
         self.model = load_model(self.model_name, custom_objects={'relu6': relu6, 'DepthwiseConv2D': DepthwiseConv2D})
         # Initialising the variables
@@ -23,9 +23,9 @@ class RT(threading.Thread):
         self.start()
 
     def run(self):
-        # Our operations on the frame come here
+        # retrieving new frames from the main thread in an infinit loop
         while True:
-            # Getting the new frame and coordinates of face in it
+            # Getting the new frame and coordinates of the face which is in in the new frame
             face_in_frame = self.lsd.get_face()
             # Changing frame color order
             frame = cv2.cvtColor(face_in_frame[4], cv2.COLOR_BGR2RGB)

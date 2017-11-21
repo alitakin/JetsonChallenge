@@ -1,14 +1,11 @@
 import cv2
 import RecognitionThread
-import copy
 import numpy as np
 
 
 class LiveSmileDetector:
-    prediction_label = 'Not smile'
-
     def __init__(self):
-        self.cap = cv2.VideoCapture(2)
+        self.cap = cv2.VideoCapture(1)
         self.ret, tmp_img = self.cap.read()
         self.face_in_frame = [0, 0, 224, 224, tmp_img]
         self.prediction_label = 'Not smile'
