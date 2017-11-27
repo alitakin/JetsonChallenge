@@ -6,11 +6,11 @@ class LiveSmileDetector:
     def __init__(self):
         self.cap = cv2.VideoCapture(1)
         self.ret, tmp_img = self.cap.read()
-        self.face_list_and_frame = [[], tmp_img]
+        self.faces_and_frame = [[], tmp_img]
         self.result = [(1, 0), 0, 0, 0, 0]
 
     def get_face(self):
-        return self.face_list_and_frame
+        return self.faces_and_frame
 
     def set_smile(self, result):
         self.result = result
@@ -31,7 +31,7 @@ while True:
     faces = face_cascade.detectMultiScale(frame, 1.3, 5)
 
     # Updating the frame and face coordinates in it
-    lsd.face_list_and_frame = [faces, colored_frame]
+    lsd.faces_and_frame = [faces, colored_frame]
 
     for face in faces:
         # Drawing rectangles around each detected face
