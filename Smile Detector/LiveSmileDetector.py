@@ -39,12 +39,17 @@ while True:
 
     for prediction_coordinate in lsd.result:
         # Display the resulting prediction
-        prediction_label = 'Smile' if prediction_coordinate[0].item(1) >= prediction_coordinate[0].item(
-            0) else 'Not smile'
-        cv2.putText(colored_frame, prediction_label,
-                    (prediction_coordinate[1] + prediction_coordinate[3] // 4,
+        no_smile_prc = "{:.2f}".format(100 * prediction_coordinate[0].item(0))
+        smile_prc = "{:.2f}".format(100 * prediction_coordinate[0].item(1))
+        pred_label = 'Smile: %' + smile_prc \
+            if prediction_coordinate[0].item(1) >= prediction_coordinate[0].item(0) \
+            else 'No smile: %' + no_smile_prc
+        # print('*********\nSmile: %' + smile_prc + '\nNo Smile: %' + no_smile_prc)
+        cv2.putText(colored_frame, pred_label,
+                    (prediction_coordinate[1],
                      prediction_coordinate[2] + prediction_coordinate[4] - 10),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), thickness=2)
+
 
     # Display images from the camera
     cv2.imshow('cropped_frame', colored_frame)
