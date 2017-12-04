@@ -20,22 +20,29 @@ lsd = LiveSmileDetector()
 RT_instance = RecognitionThread.RT(lsd)
 
 while True:
-    # Capture frame-by-frame
-    ret, frame = lsd.cap.read()
+    # Capture original_frame-by-original_frame
+    ret, original_frame = lsd.cap.read()
 
-    # Changing frame's color order
-    colored_frame = cv2.cvtColor(frame, cv2.COLOR_BGRA2BGR)
+    # Changing original_frame's color order
+    frame = cv2.cvtColor(original_frame, cv2.COLOR_BGRA2BGR)
 
-    # Detecting faces in the frame
+    # Detecting faces in the shrinked frame
     face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-    faces = face_cascade.detectMultiScale(frame, 1.3, 5)
+    new_w = int(frame.shape[1] * 0.25)
+    new_h = int(frame.shape[0] * 0.25)
+    shrinked_frame = cv2.resize(frame, (new_w, new_h))
+    faces = face_cascade.detectMultiScale(shrinked_frame, 1.3, 5)
 
-    # Updating the frame and face coordinates in it
-    lsd.faces_and_frame = [faces, colored_frame]
+    # Updating the original_frame and face coordinates in it
+    lsd.faces_and_frame = [faces, frame]
 
     for face in faces:
         # Drawing rectangles around each detected face
-        cv2.rectangle(colored_frame, (face[0], face[1]), (face[0] + face[2], face[1] + face[3]), (255, 0, 0), 2)
+        face[0] = face[0] * 4
+        face[1] = face[1] * 4
+        face[2] = face[2] * 4
+        face[3] = face[3] * 4
+        cv2.rectangle(frame, (face[0], face[1]), (face[0] + face[2], face[1] + face[3]), (255, 0, 0), 2)
 
     for prediction_coordinate in lsd.result:
         # Display the resulting prediction
@@ -45,14 +52,14 @@ while True:
             if prediction_coordinate[0].item(1) >= prediction_coordinate[0].item(0) \
             else 'No smile: %' + no_smile_prc
         # print('*********\nSmile: %' + smile_prc + '\nNo Smile: %' + no_smile_prc)
-        cv2.putText(colored_frame, pred_label,
+        cv2.putText(frame, pred_label,
                     (prediction_coordinate[1],
                      prediction_coordinate[2] + prediction_coordinate[4] - 10),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), thickness=2)
 
 
     # Display images from the camera
-    cv2.imshow('cropped_frame', colored_frame)
+    cv2.imshow('cropped_frame', frame)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break

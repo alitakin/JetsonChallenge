@@ -60,7 +60,7 @@ class RT(threading.Thread):
             self.lsd.set_smile(result)
 
     def smile_detector(self, detected_face):
-        # Preprocess image od detected face
+        # Preprocess image on detected face
         img_array = image.img_to_array(detected_face)
         img_array = np.expand_dims(img_array, axis=0)
         img_array /= 255.
