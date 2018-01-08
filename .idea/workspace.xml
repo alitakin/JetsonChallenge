@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6769c0ae-722f-4e65-807d-46c2266fa6ff" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Smile Detector/LiveSmileDetector.py" afterPath="$PROJECT_DIR$/Smile Detector/LiveSmileDetector.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Smile Detector/RecognitionThread.py" afterPath="$PROJECT_DIR$/Smile Detector/RecognitionThread.py" />
-    </list>
+    <list default="true" id="6769c0ae-722f-4e65-807d-46c2266fa6ff" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +17,8 @@
       <file leaf-file-name="LiveSmileDetector.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Smile Detector/LiveSmileDetector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="687">
-              <caret line="53" column="25" lean-forward="true" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
+            <state relative-caret-position="962">
+              <caret line="64" column="41" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="69" selection-end-column="23" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -240,8 +237,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Smile Detector/LiveSmileDetector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
-          <caret line="53" column="25" lean-forward="true" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
+        <state relative-caret-position="962">
+          <caret line="64" column="41" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="69" selection-end-column="23" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
