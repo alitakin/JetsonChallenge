@@ -5,7 +5,7 @@ import RecognitionThread
 class LiveSmileDetector:
     def __init__(self):
         # Select the desired camera id
-        self.cap = cv2.VideoCapture(0)
+        self.cap = cv2.VideoCapture(1)
         self.ret, tmp_img = self.cap.read()
         self.faces_and_frame = [[], tmp_img]
         self.result = [(1, 0), 0, 0, 0, 0]

@@ -50,7 +50,7 @@ class RT(threading.Thread):
                 elif face_rec_len > 224:
                     detected_face = cv2.resize(
                         frame[padded_y - int(face_rec_len / 2):padded_y + int(1.5 * face_rec_len),
-                        padded_x - int(face_rec_len):padded_x + int(1.5 * face_rec_len), ...], (224, 224))
+                        padded_x - int(face_rec_len / 2):padded_x + int(1.5 * face_rec_len), ...], (224, 224))
                     res = self.smile_detector(detected_face)
 
                 # Appending result of prediction and its coordinates to the list

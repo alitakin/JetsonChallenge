@@ -3,3 +3,4 @@ Smile Detector/*.mp4
 Smile Detector/test.py
 Smile Detector/__pycache__/
 Smile Detector/*.pyc
+.idea/
