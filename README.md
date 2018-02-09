@@ -7,6 +7,7 @@ read more about the data: [DeepChrome](https://arxiv.org/abs/1607.02078)
 
 * **Pedram Ghazi**  - pedram.ghazi@tut.fi
 * **Saboktakin Hayati**  - saboktakin.hayati@tut.fi
+* **Heikki Huttunen**  - huttunen.heikki@tut.fi
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
