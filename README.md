@@ -14,6 +14,13 @@ See also the list of [contributors](https://github.com/your/project/contributors
 ## Built With
 * [Python 3.5] (https://www.python.org/doc/)
 * [scikit-learn 0.18](http://scikit-learn.org/stable/documentation.html) - The machine learning framework used
+* [OPEN CV]() - which version?
+* [tensorflow]() - 
+* [keras]() - 
+* [numpy]() - 
+
+
+
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
