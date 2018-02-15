@@ -12,8 +12,10 @@ Link to a youtube video [Short Demo](https://www.youtube.com/watch?v=4JGatQOchFo
 * Detect multiple faces and assign face coordinates.
 * Estimate probability of smiling.
 * Sketch the frame with prediction result. 
- 
 
+The sequence diagram looks like this:
+
+![sequence diagram]( https://github.com/alitakin/JetsonChallenge/blob/master/Nvidia_JetSon.PNG)
 
 ## Authors
 * **Pedram Ghazi**  - pedram.ghazi@tut.fi
@@ -39,7 +41,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Further development for recognizing other facial expressions(then we have to consider a new name).
 
 ## Acknowledgments
-* Tampere University of Technology.(http://www.tut.fi/en/home)
+* [Tampere University of Technology](http://www.tut.fi/en/home).
 * [Signal Processing Lab](http://www.tut.fi/en/about-tut/departments/signal-processing/). 
 * Hat tip to anyone who's code was used.
 * Inspiration.
