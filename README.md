@@ -1,11 +1,18 @@
-# TUT Embedded Smile Recognizer 
-
+# TUT Embedded Smile Detectot 
+The idea is to create and deploy an embedded facial expressions detector application on the Nvidia Jetson TX2. We have developed an application capable of detecting faces and computing probability of smiles on them.
 link of challange: [NVIDIA Jetson Challenge](https://developer.nvidia.com/embedded/community/jetson-challenge)
 read more about the device: [jetson-tx2](https://developer.nvidia.com/embedded/buy/jetson-tx2)
 
 ## Demo 
 Link to a youtube video [Short Demo](https://www.youtube.com/watch?v=4JGatQOchFo&feature=youtu.be)
 
+## The workflow:
+
+* Capture frames in the main thread and make them accessible for the other threads.
+* Detect multiple faces and assign face coordinates.
+* Estimate probability of smiling.
+* Sketch the frame with prediction result. 
+ 
 
 
 ## Authors
@@ -32,7 +39,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Further development for recognizing other facial expressions(then we have to consider a new name).
 
 ## Acknowledgments
-* Tampere University of Technology.
+* Tampere University of Technology.(http://www.tut.fi/en/home)
 * [Signal Processing Lab](http://www.tut.fi/en/about-tut/departments/signal-processing/). 
 * Hat tip to anyone who's code was used.
 * Inspiration.
