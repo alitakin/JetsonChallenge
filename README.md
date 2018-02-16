@@ -11,8 +11,8 @@ Link to a youtube video [Short Demo](https://www.youtube.com/watch?v=4JGatQOchFo
 
 * Capture frames in the main thread and make them accessible for the other threads.
 * Detect multiple faces and assign face coordinates.
-* Estimate probability of smiling.
-* Sketch the frame with prediction result. 
+* Estimate probability of smiles in face rectangles.
+* Sketch the frame with prediction results. 
 
 The sequence diagram looks like this:
 
@@ -37,9 +37,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 
 ## To Do 
-* Expand multi-threading on the components that have been indicated by dashed line.
-* Try with other data sets.
-* Further development for recognizing other facial expressions(then we have to consider a new name).
+* Apply multithreading for other components and modules.
+* Pretrain with other data sets.
+* Further development for recognizing other facial expressions.
 
 ## Acknowledgments
 * [Tampere University of Technology](http://www.tut.fi/en/home).
